@@ -19,7 +19,7 @@ for i = 1:size(tout)
     if battery_current.Data(i) < 0
         battery_discharging = [battery_discharging;tout(i) battery_voltage.Data(i) battery_current.Data(i) battery_current.Data(i)*battery_voltage.Data(i)];
     end
-    if battery_current.Data(i) == 0
+    if abs(battery_current.Data(i)) < 0.1
         battery_stable = [battery_stable;tout(i) battery_voltage.Data(i) battery_current.Data(i) battery_current.Data(i)*battery_voltage.Data(i)];
     end
 end
