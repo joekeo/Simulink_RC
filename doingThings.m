@@ -27,4 +27,10 @@ csvwrite('battery.csv',battery_data);
 csvwrite('battery_charging.csv',battery_charging);
 csvwrite('battery_discharging.csv',battery_discharging);
 csvwrite('battery_stable.csv',battery_stable);
+hold on
 
+plot(battery_charging(:,1),battery_charging(:,4))
+plot(battery_discharging(:,1),battery_discharging(:,4))
+plot(battery_stable(:,1),battery_stable(:,4))
+
+hold off
