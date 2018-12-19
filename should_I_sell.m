@@ -5,7 +5,7 @@ price_mean = mean(price);
 price_std = std(price);
 minute = data(:,2);
 seconds_in_a_year = 365 * 24 * 60 * 60;
-seconds_in_15_min = 15*60;
+seconds_in_15_min = 5*60;
 data_seconds = [0 0];
 
 for j = 1:size(price)
